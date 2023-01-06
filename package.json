@@ -1,27 +1,27 @@
 {
-  "homepage": "https://2cubepratik.github.io/barba",
-  "name": "barba-js",
-  "source": "build/index.html",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "parcel src/views/index.pug",
-    "build": "parcel build --dist-dir=build --public-url=. src/views/index.pug --no-source-maps"
-  },
-  "devDependencies": {
-    "@parcel/transformer-pug": "^2.8.2",
-    "gh-pages": "^4.0.0",
-    "parcel": "^2.8.2"
-  },
-  "dependencies": {
-    "@barba/core": "^2.9.7",
-    "@barba/css": "^2.1.15",
-    "@parcel/resolver-glob": "^2.8.2",
-    "@parcel/transformer-css": "^2.8.2",
-    "gsap": "^3.11.4",
-    "jquery": "^3.6.3",
-    "locomotive-scroll": "^4.1.4",
-    "pug": "^3.0.2"
-  }
+    "homepage": "https://2cube-studio.github.io/food",
+    "name": "barba-js",
+    "source": "build/index.html",
+    "browserslist": "> 0.5%, last 2 versions, not dead",
+    "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "start": "parcel src/views/index.pug",
+        "build": "parcel build --dist-dir=build --public-url=. src/views/index.pug --no-source-maps"
+    },
+    "devDependencies": {
+        "@parcel/transformer-pug": "^2.8.2",
+        "gh-pages": "^4.0.0",
+        "parcel": "^2.8.2"
+    },
+    "dependencies": {
+        "@barba/core": "^2.9.7",
+        "@barba/css": "^2.1.15",
+        "@parcel/resolver-glob": "^2.8.2",
+        "@parcel/transformer-css": "^2.8.2",
+        "gsap": "^3.11.4",
+        "jquery": "^3.6.3",
+        "locomotive-scroll": "^4.1.4",
+        "pug": "^3.0.2"
+    }
 }
