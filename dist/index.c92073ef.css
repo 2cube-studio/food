@@ -510,6 +510,7 @@ span.text_color_chang {
   font-weight: 900;
   line-height: 25px;
   transition: all .4s;
+  display: block;
 }
 
 .Production_menu ul li a:hover {
@@ -753,6 +754,49 @@ img.Production_hover_thumbnail {
 .Add_thumbnail img {
   object-fit: cover;
   display: block;
+}
+
+.Add_section .add_box {
+  height: 800px;
+  position: relative;
+}
+
+.Add_section .add_box img {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.Add_section .add_box img:nth-child(6) {
+  z-index: 1;
+  bottom: 0;
+}
+
+.Add_section .add_box img:nth-child(5) {
+  z-index: 2;
+  bottom: 19.33%;
+}
+
+.Add_section .add_box img:nth-child(4) {
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+}
+
+.Add_section .add_box img:nth-child(3) {
+  z-index: 4;
+  top: 23.33%;
+}
+
+.Add_section .add_box img:nth-child(2) {
+  z-index: 5;
+  top: 3%;
+}
+
+.Add_section .add_box img:nth-child(1) {
+  z-index: 6;
+  top: 0;
 }
 
 .pizza_done_cover {
