@@ -127,7 +127,7 @@ span.text_color_chang { color: #FFCF53; font-style: italic; }
 .Production_right { width: 50%; text-align: right; }
 .Production_menu ul { margin: 0; padding: 0; list-style: none; }
 .Production_menu ul li { display: inline-block; padding: 0 9px; }
-.Production_menu ul li a { background: transparent; border-radius: 100px; padding: 16px 25px; font-family: 'Merriweather'; font-style: normal; font-weight: 900; font-size: 20px; line-height: 25px; text-align: center; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-heading); border: 1px solid #C5C5C5; transition: all 0.4s ease; }
+.Production_menu ul li a { display: block; background: transparent; border-radius: 100px; padding: 16px 25px; font-family: 'Merriweather'; font-style: normal; font-weight: 900; font-size: 20px; line-height: 25px; text-align: center; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-heading); border: 1px solid #C5C5C5; transition: all 0.4s ease; }
 .Production_menu ul li a:hover { background: #4E966E; transition: all 0.4s ease; border-color: #4E966E; color: #ffffff; border: none; }
 .Production_row_2 { padding: 178px 0; display: flex; flex-flow: wrap;/*transform: translateY(150px);*/ }
 .Production_colm_2 { width: calc(25% - 30px); margin: 15px; }
@@ -180,6 +180,17 @@ img.Production_hover_thumbnail { opacity: 0; }
 .Add_right { width: 50%; padding: 0 15px; }
 .Add_content {  color: var(--text-heading); margin-bottom: 20px; }
 .Add_thumbnail img { display: block; object-fit: cover; } 
+
+.Add_section .add_box { position: relative; height: 800px; }
+.Add_section .add_box img { position: absolute; margin: auto; left: 0; right: 0; }
+.Add_section .add_box img:nth-child(6) { bottom: 0; z-index: 1; }
+.Add_section .add_box img:nth-child(5) { bottom: 19.33%; z-index: 2; }
+.Add_section .add_box img:nth-child(4) { top: 0; bottom: 0; z-index: 3; }
+.Add_section .add_box img:nth-child(3) { top: 23.33%; z-index: 4; }
+.Add_section .add_box img:nth-child(2) { top: 3%; z-index: 5; }
+.Add_section .add_box img:nth-child(1) { top: 0; z-index: 6; }
+
+
 
 
 /*PIZZA DONE*/
