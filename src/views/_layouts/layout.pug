@@ -1,0 +1,11 @@
+html
+  head
+    link(rel="stylesheet", href="../css/style.css")
+    link(rel="stylesheet", href="../css/locomotive-scroll.css")
+    
+    block head
+  body(data-scroll-container)
+    include ../_includes/header.pug 
+    block main
+    include ../_includes/footer.pug 
+    script(src="../js/app.js" type="module" ) 
