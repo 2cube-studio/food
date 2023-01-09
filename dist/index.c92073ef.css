@@ -292,19 +292,40 @@ section.header_section:before {
 .button.hero_second_btn a {
   color: var(--text-heading);
   background-color: #0000;
+  padding: 5px 25px;
 }
 
 .button.hero_btn a i {
   margin-right: 10px;
 }
 
+.button.hero_btn {
+  padding-right: 10px;
+}
+
+.button.hero_second_btn {
+  padding-left: 10px;
+}
+
 .button.hero_second_btn i {
   color: #4e966e;
+  width: 60px;
+  height: 60px;
   background: #fff;
   border-radius: 100px;
+  justify-content: center;
+  align-items: center;
   margin-right: 20px;
-  padding: 20px 22px;
+  font-size: 20px;
+  display: inline-flex;
   box-shadow: 0 0 25px #0000001a;
+}
+
+.button.hero_second_btn a:hover i {
+  background-color: var(--text-color-span);
+  color: var(--text-heading);
+  transition: all .4s;
+  box-shadow: 0 0 20px #fa582a;
 }
 
 .hero_section {
@@ -347,12 +368,12 @@ section.header_section:before {
 
 .pizza_thumbnail img {
   content: "";
-  width: 329px;
-  height: 329px;
+  width: 500px;
+  height: 430px;
   border-radius: 100%;
   position: absolute;
-  inset: 0 0 0 77px;
-  transform: translateY(-40%);
+  inset: -169px 0 0 37px;
+  transform: translateY(-0%);
 }
 
 .pizza_section {
@@ -370,12 +391,12 @@ section.header_section:before {
 }
 
 .pizza_center {
-  width: 40%;
+  width: 45%;
   position: relative;
 }
 
 .pizza_right {
-  width: 30%;
+  width: 25%;
   position: relative;
 }
 
@@ -384,15 +405,17 @@ section.header_section:before {
 }
 
 .pizza_images img {
-  width: 100px;
+  width: 120px;
   object-fit: contain;
   display: inline-block;
   position: absolute;
-  inset: auto 0 25px 20px;
+  inset: auto 0 25px calc(33.3333% - 80px);
 }
 
 .pizza_cover {
   text-align: center;
+  max-width: 540px;
+  margin: 0 0 0 auto;
   position: absolute;
   inset: auto 0 32px;
 }
@@ -421,10 +444,13 @@ span.text_color_chang {
 .pizza_price h5 {
   color: #fff;
   padding: 0 0 28px;
+  font-family: Merriweather, serif;
+  font-style: italic;
 }
 
 .button.pizza_btn a {
   background-color: var(--text-heading);
+  padding: 12px 34px;
 }
 
 .button.pizza_btn a:hover {
@@ -432,11 +458,11 @@ span.text_color_chang {
 }
 
 .pizza_images img:nth-child(2) {
-  left: calc(50% + 80px);
+  left: calc(59% - 50px);
 }
 
 .pizza_images img:nth-child(3) {
-  left: calc(25% + 50px);
+  left: calc(90% - 50px);
 }
 
 .pizza_section {
@@ -513,10 +539,19 @@ span.text_color_chang {
   display: block;
 }
 
+img.Production_hover_thumbnail {
+  width: 230px;
+  margin: 0 auto;
+}
+
+.Production_cover:hover img.Production_image {
+  opacity: 0;
+}
+
 .Production_menu ul li a:hover {
   color: #fff;
   background: #4e966e;
-  border: none;
+  border-color: #4e966e;
   transition: all .4s;
 }
 
@@ -583,6 +618,10 @@ span.text_color_chang {
   padding: 15px 20px;
 }
 
+.button.Production_btn a i {
+  margin-right: 10px;
+}
+
 .Production_cover:hover .Production_btn a {
   color: #fff;
   background: #035c2c;
@@ -605,7 +644,7 @@ span.text_color_chang {
 }
 
 .Production_thumbnail img {
-  height: 284px;
+  height: 100%;
   object-fit: contain;
   transition: all .4s;
   position: absolute;
@@ -618,11 +657,6 @@ img.Production_hover_thumbnail {
 
 .Production_cover:hover .Production_hover_thumbnail {
   opacity: 1;
-}
-
-.Production_cover:hover {
-  transition: all .4s;
-  transform: translateY(-30%);
 }
 
 .Production_section {
@@ -654,18 +688,14 @@ img.Production_hover_thumbnail {
 }
 
 .our_food_left {
-  width: 45%;
+  width: 40%;
   padding: 0 15px;
-}
-
-.our_food_thumbnail img {
-  object-fit: cover;
-  display: block;
 }
 
 .our_food_right {
-  width: 55%;
+  width: 60%;
   padding: 0 15px;
+  position: relative;
 }
 
 .our_food_content {
@@ -686,6 +716,64 @@ img.Production_hover_thumbnail {
 .our_food_caption h6 {
   color: #035c2c;
   font-style: italic;
+}
+
+.hafa_pizaa {
+  width: 618px;
+  margin: 0 0 0 auto;
+  display: block;
+}
+
+.onine {
+  position: absolute;
+  inset: -110px auto 0 221px;
+}
+
+.lot {
+  position: absolute;
+  inset: 11px auto 0 255px;
+}
+
+.green_mirch {
+  position: absolute;
+  top: 235px;
+  bottom: 0;
+  left: 142px;
+}
+
+.pizza_cut {
+  position: absolute;
+  inset: auto 0 -3px 231px;
+}
+
+.pan {
+  content: "";
+  position: absolute;
+  top: -59px;
+}
+
+.laving {
+  position: absolute;
+  top: 59px;
+  left: 137px;
+}
+
+.grlica {
+  position: absolute;
+  top: 144px;
+  left: 102px;
+}
+
+.marich {
+  position: absolute;
+  top: 102px;
+  left: -13px;
+}
+
+.pizaa_tomto {
+  position: absolute;
+  top: auto;
+  bottom: 160px;
 }
 
 .customise_cover {
@@ -1226,6 +1314,7 @@ span.price_two {
 }
 
 .rating_box h3 {
+  font-family: unna;
   font-weight: 700;
 }
 
@@ -1556,6 +1645,18 @@ span.footer_chang_color {
 
 .footer_cover h2 {
   color: #fff;
+}
+
+.Production_cover:before {
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 60%;
+  background: #eceff4;
+  border-radius: 10px;
+  transition: all .4s;
+  position: absolute;
+  inset: auto 0 0;
 }
 
 /*# sourceMappingURL=index.c92073ef.css.map */
