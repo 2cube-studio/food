@@ -30,19 +30,19 @@ ScrollTrigger.scrollerProxy("body", {
     }
 });
 
-gsap.from(".pizza_heading", {
-    scrollTrigger: {
-        trigger: ".pizza_section",
-        scroller: "body",
-        scrub: true,
-        pin: true,
-        start: "top top",
-        end: "+=100%"
-    },
-    scaleX: 0,
-    transformOrigin: "left center",
-    ease: "none"
-});
+// gsap.from(".pizza_heading", {
+//     scrollTrigger: {
+//         trigger: ".pizza_section",
+//         scroller: "body",
+//         scrub: true,
+//         pin: true,
+//         start: "top top",
+//         end: "+=100%"
+//     },
+//     scaleX: 0,
+//     transformOrigin: "left center",
+//     ease: "none"
+// });
 
 
 
