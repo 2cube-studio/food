@@ -4,8 +4,10 @@ html
     link(rel="stylesheet", href="../css/locomotive-scroll.css")
     
     block head
-  body(data-scroll-container)
+  body
+    <div class="smooth-scroll">
     include ../_includes/header.pug 
     block main
     include ../_includes/footer.pug 
+    </div>
     script(src="../js/app.js" type="module" ) 

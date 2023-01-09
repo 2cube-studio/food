@@ -543,14 +543,17 @@ var _magneticButton = require("./functions/magnetic-button");
 var _magneticButtonDefault = parcelHelpers.interopDefault(_magneticButton);
 (0, _magneticButtonDefault.default)();
 (0, _gsapDefault.default).registerPlugin((0, _scrollTriggerDefault.default));
-const scroller = new (0, _locomotiveScrollDefault.default)({
-    el: document.querySelector("[data-scroll-container]"),
+// Using Locomotive Scroll
+const locoScroll = new (0, _locomotiveScrollDefault.default)({
+    el: document.querySelector(".smooth-scroll"),
     smooth: true
 });
-scroller.on("scroll", (0, _scrollTriggerDefault.default).update);
-(0, _scrollTriggerDefault.default).scrollerProxy("body", {
+// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+locoScroll.on("scroll", (0, _scrollTriggerDefault.default).update);
+// tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
+(0, _scrollTriggerDefault.default).scrollerProxy(".smooth-scroll", {
     scrollTop (value) {
-        return arguments.length ? scroller.scrollTo(value, 0, 0) : scroller.scroll.instance.scroll.y;
+        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
     },
     getBoundingClientRect () {
         return {
@@ -561,20 +564,68 @@ scroller.on("scroll", (0, _scrollTriggerDefault.default).update);
         };
     }
 });
-(0, _gsapDefault.default).from(".pizza_heading", {
-    scrollTrigger: {
-        trigger: ".pizza_section",
-        scroller: "body",
-        scrub: true,
-        pin: true,
-        start: "top top",
-        end: "+=100%"
-    },
-    scaleX: 0,
-    transformOrigin: "left center",
-    ease: "none"
+/* */ var tl2 = (0, _gsapDefault.default).timeline();
+tl2.to(".onine", {
+    top: "17px",
+    left: "329px"
+}, 0).to(".pan", {
+    top: "73px",
+    left: "240px"
+}, 0).to(".lot", {
+    top: "125px",
+    left: "321px"
+}, 0).to(".laving", {
+    top: "191px",
+    left: "267px"
+}, 0).to(".grlica", {
+    top: "224px",
+    left: "242px"
+}, 0).to(".marich", {
+    top: "152px",
+    left: "177px"
+}, 0).to(".green_mirch", {
+    top: "268px",
+    left: "302px"
+}, 0).to(".pizaa_tomto", {
+    bottom: "170px",
+    left: "220px"
+}, 0).to(".pizza_cut", {
+    bottom: "47px",
+    left: "301px"
+}, 0);
+(0, _scrollTriggerDefault.default).create({
+    trigger: ".our_food_section",
+    scroller: ".smooth-scroll",
+    scrub: true,
+    start: "top top",
+    end: "+=150%",
+    pin: true,
+    animation: tl2
 });
-(0, _scrollTriggerDefault.default).addEventListener("refresh", ()=>scroller.update());
+var tl = (0, _gsapDefault.default).timeline();
+tl.to(".Add_section .add_box img:nth-child(1)", {
+    top: "40%"
+}, 0).to(".Add_section .add_box img:nth-child(2)", {
+    top: "36%"
+}, 0).to(".Add_section .add_box img:nth-child(3)", {
+    top: "39%"
+}, 0).to(".Add_section .add_box img:nth-child(5)", {
+    bottom: "35%"
+}, 0).to(".Add_section .add_box img:nth-child(6)", {
+    bottom: "30%"
+}, 0);
+(0, _scrollTriggerDefault.default).create({
+    scroller: ".smooth-scroll",
+    scrub: true,
+    trigger: ".Add_section",
+    start: "top top",
+    end: "+=150%",
+    pin: true,
+    animation: tl
+});
+/* */ // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+(0, _scrollTriggerDefault.default).addEventListener("refresh", ()=>locoScroll.update());
+// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 (0, _scrollTriggerDefault.default).refresh();
 
 },{"locomotive-scroll":"iDXE3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","gsap":"fPSuC","gsap/ScrollTrigger":"7wnFk","./functions/magnetic-button":"dHkR6"}],"iDXE3":[function(require,module,exports) {
