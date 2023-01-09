@@ -357,10 +357,6 @@ span.footer_color_chang { color: #035C2C; }
 span.footer_chang_color { color: #FFCF53; }
 .footer_cover h2 { color: #fff; }
 
-<<<<<<< HEAD
-
-/* This is comment from kamlesh test */
-=======
 .Production_cover:before {
     position: absolute;
     top: auto;
@@ -376,7 +372,6 @@ span.footer_chang_color { color: #FFCF53; }
     transition: all 0.4s ease;
 }
 
->>>>>>> ec2dd50e03f861986871bce25c2c3ce0c41c70fa
 
 /*pizza_section*/
 

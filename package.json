@@ -4,10 +4,11 @@
     "source": "build/index.html",
     "browserslist": "> 0.5%, last 2 versions, not dead",
     "scripts": {
+        "clean:output": "rm -rf dist",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
-        "start": "parcel src/views/index.pug",
-        "build": "parcel build --dist-dir=build --public-url=. src/views/index.pug --no-source-maps"
+        "start": "npm run clean:output && parcel src/views/index.pug",
+        "build": "npm run clean:output && parcel build --dist-dir=build --public-url=. src/views/index.pug --no-source-maps"
     },
     "devDependencies": {
         "@parcel/transformer-pug": "^2.8.2",
