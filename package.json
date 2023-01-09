@@ -7,7 +7,7 @@
         "clean:output": "rm -rf dist",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
-        "start": "npm run clean:output && parcel src/views/index.pug",
+        "start": "parcel src/views/index.pug",
         "build": "npm run clean:output && parcel build --dist-dir=build --public-url=. src/views/index.pug --no-source-maps"
     },
     "devDependencies": {
