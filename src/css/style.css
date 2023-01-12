@@ -132,7 +132,7 @@ span.text_color_chang { color: #FFCF53; font-style: italic; }
 img.Production_hover_thumbnail {width: 230px;margin: 0 auto;}
 .Production_cover:hover img.Production_image {opacity: 0;}
 .Production_menu ul li a:hover { background: #4E966E; transition: all 0.4s ease; border-color: #4E966E; color: #ffffff;  }
-.Production_row_2 { padding: 178px 0; display: flex; flex-flow: wrap;/*transform: translateY(150px);*/ }
+.Production_row_2 { padding: 75px 0; display: flex; flex-flow: wrap;/*transform: translateY(150px);*/ }
 .Production_colm_2 { width: calc(25% - 30px); margin: 15px; }
 .Production_cover { padding: 20px; position: relative; transition: all 0.4s ease; border-radius: 10px; }
 .Production_text_inner_cover { text-align: center; padding: 20px 0; }
@@ -185,7 +185,7 @@ img.Production_hover_thumbnail { opacity: 0; }
 .customise_box_cover { text-align: center; }
 .customise_row { display: flex; flex-flow: wrap; align-items: center; margin: 0 -15px;padding: 30px 0; }
 .customise_box { width: calc(20% - 30px); padding: 0 15px; margin: 15px; }
-.customise_thumbnail img {filter: drop-shadow(-10px 15px 20px rgba(0, 0, 0, 0.2)); display: block;object-fit: cover;}
+.customise_thumbnail img {filter: drop-shadow(-10px 15px 20px rgba(0, 0, 0, 0.2)); display: inline-block;object-fit: cover;}
 .customise_box_heading h4 { font-style: italic; }
 
 /*ADD*/
@@ -359,34 +359,140 @@ span.footer_color_chang { color: #035C2C; }
 span.footer_chang_color { color: #FFCF53; }
 .footer_cover h2 { color: #fff; }
 
-.Production_cover:before {
-    position: absolute;
-    top: auto;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    content: "";
-    background: #ECEFF4;
-    z-index: -1;
-    border-radius: 10px;
-    width: 100%;
-    height: 60%;
-    transition: all 0.4s ease;
+
+
+/*our Product*/
+
+.wisconsin_row { display: flex; flex-flow: wrap; align-items: center; }
+.wisconsin_left { width: 50%; }
+.wisconsin_heading h3 { padding-bottom: 15px; }
+.wisconsin_heading h6 { padding-bottom: 8px; }
+.wisconsin_content p { font-family: 'Merriweather'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 28px; max-width: 615px; }
+.wisconsin_btn_row { display: flex; flex-flow: wrap; }
+.button.wisconsin_btn { padding-right: 10px; }
+.button.wisconsin_btn2 { padding-left: 10px; }
+.button.wisconsin_btn a { background: transparent; font-size: 24px; line-height: 25px;/* identical to box height, or 104% */ letter-spacing: 0.05em; text-transform: uppercase; color: #1A1A1E; font-family: 'Merriweather'; font-weight: 900; }
+.wisconsin_right { width: 50%; }
+.wisconsin_section { padding: 80px 0; }
+.button.wisconsin_btn2 a { background: var(--text-color-span);color: var( --text-heading); }
+.button.wisconsin_btn2 a:hover {color: #fff;background: #4e966e;}
+.button.wisconsin_btn2 a i {margin-right: 15px;}
+
+
+/*discount*/
+.discount_section {padding: 80px 0;}
+.discount_heading { text-align: center; padding: 20px 20px; background: #FA582A; border-radius: 20px 20px 0px 0px; max-width: 881px; margin: 0 auto; text-transform: uppercase; }
+.discount_heading h4 { color: #fff; }
+span.discount_underline { color: #035C2C; border-bottom: 2px solid; }
+.discount_row { display: flex; align-items: center; flex-flow: wrap; margin: 0 -15px; background: #F5F5F5; border-radius: 20px; }
+.discount_colm { width: calc(25% - 30px); margin: 15px; }
+.discount_thumbnail img { height: 150px;}
+.discount_thumbnail:before { position: absolute; content: ""; right: 0; left: 0; top: auto; bottom: 0; width: 100%; height: 70%; z-index: -1; background: #FFFFFF; border-radius: 20px; }
+.discount_thumbnail { position: relative; z-index: 1; text-align: center; }
+.discount_colm { padding: 0 20px; position: relative; }
+.discount_colm:before { position: absolute; content: "+"; right: -25px; top: 63%; bottom: 0; z-index: 13; font-size: 36px; font-weight: 800;color: #000; transform: translateY(-50%); width: 23px; height: 42px; }
+.discount_colm:nth-child(3):before { content: "="; }
+.button.discount_btn a { letter-spacing: .05em; text-transform: uppercase; color: #1a1a1e; background: none; font-family: Merriweather; font-size: 24px; font-weight: 900; line-height: 25px; }
+.button.discount_btn2 a { background: var(--text-color-span); color: var(--text-heading); }
+.button.discount_btn2 a i { margin-right: 15px; }
+.button.discount_btn2 a:hover { color: #fff; background: #4e966e; }
+.button.discount_btn { padding-bottom: 10px; }
+.button.discount_btn2 { padding-top: 10px; }
+.discount_colm:nth-child(4):before { display: none; }
+.discount_btn_row {text-align: center;}
+
+
+
+
+
+@media (max-width:1024px){
+    
+    /* section */
+    h1 {font-size: 52px;line-height: 58px;}
+    .Popular_box { width: calc(50% - 30px); }
+    .custmer_box { width: calc(50% - 30px); margin-bottom: 63px; }
+    .button.hero_second_btn{padding-left: 0;}
+    .button.hero_second_btn a{padding: 0;}
+    .our_food_section { display: none; }
+    .burger_left:before { top: -77px; width: 122px; height: 150; }
+    .burger_left:after { top: -89px; width: 110px; height: 133px; }
+    .burger_cover:before { width: 128px; height: 139px; left: -8px; top: -87px; }
+    .delivery_row h2 { font-size: 35px; line-height: 40px; }
+    .button.hero_second_btn a i {width: 35px;height: 35px;font-size: 18px;}
+    .button.hero_btn {padding:10px 0;}
+    .button.hero_second_btn {padding: 10px 0;}
+    .wisconsin_section { padding: 50px 0; }
+    h3 { font-size: 40px; }
+    h4 { font-size: 30px; }
+    .discount_colm { width: calc(50% - 30px); margin-bottom: 28px; }
+    .discount_colm:before { right:-9px; }
+    .discount_section { padding: 50px 0; }
+    .Production_menu ul li a { padding: 9px 20px; font-size: 12px; }
+    .Production_left { width: 42%; }
+    .Production_colm_2 { width: calc(50% - 30px); margin-bottom: 50px; }
+    .Production_row_2 { padding: 10px 0px; }
+    h2 { font-size: 40px; line-height: 45px; }
+    .footer_cover h2 { padding-bottom: 10px; }
+    p { font-size: 14px; line-height: 22px; }
+    .footer_icones ul li { margin: 0 9px; }
+    .Production_section { padding: 50px 0; }
+    .footer_cover {top: -7px;max-width: 600px;}
+    .Production_right {width: 58%;text-align: right;}
+    .pizza_section {display: none;}
+    .customise_box {width: calc(33.33% - 30px);}
+    .customise_row {justify-content: center;}
 }
 
-
-/*pizza_section*/
-
-/*.pizza_section { padding-top: 150px; padding-bottom: 50px;}
-.pizza_row { background-image: url(../images/main.svg); background-size: cover; background-repeat: no-repeat; min-height: 428px; background-position: top; text-align: center; align-items: center; justify-content: center; display: flex; flex-flow: wrap; position: relative; }
-.pizza_left_part { width: 33.33%; display: flex; flex-flow: wrap; padding-top: 150px;}
-.pizza_center_part { width: 33.33%; }
-.pizza_right_part { width: 33.33%; }
-.pizza_img_box { width: 33.33%; padding: 0 20px}
-.pizza_text_cover h2 { color: #fff; }
-.pizza_text_cover span { color: #FFCF53; }
-.pizza_text { color: #fff; }
-.pizza_text_cover h3 { color: #fff; }
-.button_design.pizza_btn a { padding: 15px 30px; background: #000; }
-.button_design.pizza_btn { padding-top: 10px; }
-.pizza_left_part:before { background-image: url(../images/pizaa-shap.png); background-position: left; background-repeat: no-repeat; left: 58px; top: -124px; position: absolute; content: ""; background-size: cover;     height: 340px;width: 362px }*/
+@media (max-width:767px){
+    .hero_left { width: 100%; padding-right: 0; }
+    .hero_right { width: 100%; padding-left: 0; }
+    .customise_box { width: 100%; }
+    .Add_right { width: 100%; padding: 0;margin-bottom: 40px; }
+    .Add_left { width: 100%; padding: 0; }
+    .Add_section { padding: 50px 0; }
+    .customise_section { padding: 50px 0; }
+    .Popular_left { padding: 0; }
+    .Popular_right { padding: 0; }
+    .Popular_box { width: calc(100%); margin: 0 0 30px 0; }
+    .american_pizza_left { width: 100%; padding: 0; margin-bottom: 51px; }
+    .american_pizza_right { width: 100%; padding: 0; }
+    .burger_right { width: 100%; padding: 0; margin-bottom: 45px; }
+    .burger_left { width: 100%; padding: 0; }
+    .burger_cover { padding: 10px 10px; }
+    .burger_cover:before { display: none; }
+    .burger_cover:after { display: none; }
+    .burger_left:before { display: none; }
+    .burger_left:after { display: none; }
+    .rating_box { width: 100%; margin: 0; margin-bottom: 25px; }
+    .choose_box { width: 100%; margin: 0; margin-bottom: 20px; }
+    .delivery_left_part { width: 100%; padding-right: 0; text-align: center; margin-bottom: 10px; }
+    .delivery_center_part { width: 100%; padding: 0; text-align: center; margin-bottom: 10px; }
+    .delivery_right_part { width: 100%; padding: 0; text-align: center; margin-bottom: 20px; }
+    .delivery_row h2 { font-size: 31px; line-height: 39px; }
+    .custmer_box { width: calc(100%); margin-bottom: 63px; }
+    .burger_section { padding: 50px 0; }
+    .our_food_section { display: none; }
+    .pizza_section { display: none; }
+    .custmer_section { display: none; }
+    .american_pizza_section:before { display: none; }
+    .button_cover { justify-content: center; }
+    .button.hero_second_btn { padding-left: 0; }
+    .burger_heading h2 { font-size: 35px; line-height: 41px; }
+    .wisconsin_left {width: 100%;margin-bottom: 20px;}
+    .wisconsin_right { width: 100%;}
+    h3 { font-size: 25px; }
+    .discount_colm { width: calc(100% - 30px); margin-bottom: 28px; }
+    h4 { font-size: 23px; }
+    .Production_left { width: 100%; text-align: center; }
+    .Production_right { width: 100%; }
+    .Production_menu ul li { display: block; margin-bottom: 15px; }
+    .Production_colm_2 { width: 100%; margin: 0 0 50px; }
+    h2 { font-size: 35px;line-height: 41px; }
+    .footer_left { width: 100%; text-align: center; padding-bottom: 22px; }
+    .footer_ceneter { width: 100%; padding-bottom: 24px; }
+    .footer_right { width: 100%; text-align: center; padding-bottom: 20px; }
+    .footer_cover { position: static;}
+    .discount_colm:before { right: 0;left: 180px;bottom: -61px;top: auto; }
+    .choose_section {background-color: #eceff4;background-image: none !important;padding: 50px 0;}
+    .Production_thumbnail img {margin: 0 auto;}
+}
